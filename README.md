@@ -5,6 +5,7 @@ This guide walks us through creating a serverless PDF-to-speech converter utiliz
 
 ### Architectural Diagram
  ![image](https://github.com/user-attachments/assets/50068163-df41-4df1-ba4f-039be4e85858)
+
 *This diagram depicts a serverless solution for converting PDF documents to audio files. It shows the complete process flow starting with a user uploading PDF files to an S3 input bucket. When files arrive, they trigger a Lambda function that orchestrates the conversion process. The Lambda function first uses Amazon Textract to extract text from the PDFs, chunks this text into manageable segments, and then uses Amazon Polly to convert each text chunk into speech. The resulting MP3 files are stored in an S3 output bucket where users can retrieve them. The diagram also includes the security layer with IAM roles and monitoring through CloudWatch logs. The entire workflow demonstrates how multiple AWS services integrate to create a complete serverless document processing solution.*
 
 ### AWS Services Used:
